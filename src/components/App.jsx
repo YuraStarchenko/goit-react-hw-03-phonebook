@@ -5,6 +5,7 @@ import { Container, Text, Title, TitleText, Book } from './Container.styled';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { nanoid } from 'nanoid';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export class App extends Component {
   state = {
@@ -21,7 +22,7 @@ export class App extends Component {
     };
 
     this.state.contacts.filter(contact => contact.name === data.name).length
-      ? alert(`${newContact.name} is already in contacts`)
+      ? Notify.info(`${newContact.name} is already in contacts`)
       : this.setState(prevState => ({
           contacts: [newContact, ...prevState.contacts],
         }));
