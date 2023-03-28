@@ -19,7 +19,7 @@ export const Btn = styled.button`
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: #ffffff;
-  background-color: #2196f3;
+  background-color: blue;
   border: none;
   border-radius: 20px;
   margin: 10px 0;
@@ -28,7 +28,7 @@ export const Btn = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: blue;
+    background-color: #2196f3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
 `;
